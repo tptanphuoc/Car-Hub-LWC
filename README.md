@@ -1,3 +1,33 @@
+# Welcome to Car Hub Management Project with Light Web Component framework
+
+- This is a simple project created for ordering and managing Car with following functions:
+	- Create/Update/Delete Cars
+	- View all Car 
+	- Search Cars by Name, Max Price, Category, Make Type
+
+## Technologies
+
+- Frontend:
+  - HTML
+  - CSS
+  - JavaScript
+  - Lightning Web Component (LWC) framework including: Lightning Message Service, Message Channel, Navigation Service
+
+- Backend:
+  - Apex
+  - SOQL (Salesforce Object Query Language)
+
+## Screenshots
+![images](https://github.com/tptanphuoc/Car-Hub-LWC/blob/main/images/1.png)
+![images](https://github.com/tptanphuoc/Car-Hub-LWC/blob/main/images/2.png)
+![images](https://github.com/tptanphuoc/Car-Hub-LWC/blob/main/images/3.png)
+
+## License
+
+### Connect me via huynhphuoc2468@gmail.com
+#### Copyright &#169; 2023 tptanphuoc
+
+
 # Salesforce DX Project: Next Steps
 
 Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
