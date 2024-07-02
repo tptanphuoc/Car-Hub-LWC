@@ -4,6 +4,7 @@
 	- Create/Update/Delete Cars
 	- View all Car 
 	- Search Cars by Name, Max Price, Category, Make Type
+	- View a Car details and list of similar Car
 
 ## Technologies
 
@@ -11,7 +12,7 @@
   - HTML
   - CSS
   - JavaScript
-  - Lightning Web Component (LWC) framework including: Lightning Message Service, Message Channel, Navigation Service
+  - Lightning Web Component (LWC) framework including: Lightning Message Service, Message Channel, Navigation Service.
 
 - Backend:
   - Apex
@@ -19,13 +20,15 @@
 
 ## Screenshots
 ![images](https://github.com/tptanphuoc/Car-Hub-LWC/blob/main/images/1.png)
+
 ![images](https://github.com/tptanphuoc/Car-Hub-LWC/blob/main/images/2.png)
+
 ![images](https://github.com/tptanphuoc/Car-Hub-LWC/blob/main/images/3.png)
 
 ## License
 
 ### Connect me via huynhphuoc2468@gmail.com
-#### Copyright &#169; 2023 tptanphuoc
+#### Copyright &#169; 2024 tptanphuoc
 
 
 # Salesforce DX Project: Next Steps
