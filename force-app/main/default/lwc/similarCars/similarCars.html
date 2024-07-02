@@ -1,0 +1,32 @@
+<template>
+    <lightning-card title="Similar Cars" icon-name="standard:link">
+        <div class="slds-m-around_medium">
+            <template if:false={similarCars}>
+                <div class="slds-align_absolute-center">
+                    <lightning-button variant="brand" label="Get Similar Cars" onclick={handleSimilarCars}>
+                    </lightning-button>
+                </div>
+            </template>
+            <template lwc:if={similarCars}>
+                <template for:each={similarCars} for:item="car">
+                    <lightning-layout class="slds-m-bottom_medium" key={car.Id} vertical-align="center">
+                        <lightning-layout-item>
+                            <img class="carImg" src={car.Picture_URL__c} alt="Car picture">
+                        </lightning-layout-item>
+                        <lightning-layout-item flexibility="grow" class="slds-p-horizontal_small">
+                            <p><strong>{car.Name}</strong></p>
+                            <p>
+                                <lightning-formatted-number format-style="currency" currency-code="VND"
+                                    value={car.MSRP__c} maximum-fraction-digits="0"></lightning-formatted-number>
+                            </p>
+                        </lightning-layout-item>
+                        <lightning-layout-item>
+                            <lightning-button variant="brand" label="View Detail" data-id={car.Id}
+                                onclick={handleViewDetail}></lightning-button>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

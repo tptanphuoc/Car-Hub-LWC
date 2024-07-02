@@ -1,0 +1,44 @@
+<template>
+    <lightning-card title="Filters" icon-name="standard:filter">
+        <div class="slds-m-horizontal_medium">
+            <b>Search Name</b>
+            <lightning-input name="" type="search" value={searchCriterias.name}
+                onchange={handleSearchNameChange}></lightning-input>
+
+            <section class="slider_section slds-m-vertical_small">
+                <b>Max Price</b>
+                <lightning-slider step="100" min="0" max="999999" value={searchCriterias.maxPrice}
+                    onchange={handleMaxPriceChange}></lightning-slider>
+            </section>
+            <section class="slds-m-vertical_small">
+                <b>Category</b>
+                <template lwc:if={carCategories.data}>
+                    <template for:each={carCategories.data.values} for:item="cate">
+                        <lightning-input key={cate.value} 
+                        label={cate.label} 
+                        name="carCategories"
+                        value={cate.value}
+                        type="checkbox" 
+                        checked
+                        onchange={handleCheckboxChange}></lightning-input>
+                    </template>
+                </template> 
+            </section>
+
+            <section>
+                <b>Make</b>
+                <template lwc:if={carMakes.data}>
+                    <template for:each={carMakes.data.values} for:item="make">
+                        <lightning-input key={make.value} 
+                        label={make.label} 
+                        name="carMakes"
+                        value={make.value}
+                        type="checkbox" 
+                        checked="true"
+                        onchange={handleCheckboxChange}></lightning-input>
+                    </template>
+                </template>
+            </section>
+        </div>
+    </lightning-card>
+</template>

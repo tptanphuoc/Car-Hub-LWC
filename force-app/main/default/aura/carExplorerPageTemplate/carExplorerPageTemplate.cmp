@@ -1,0 +1,20 @@
+<aura:component implements="lightning:appHomeTemplate" description="Custom Three Columns layout" access="global">
+
+    <aura:attribute name="left" type="Aura.Component[]" access="global"/> <!--  Mảng component left chứa các layoutItem được khai báo với dạng {!v.left} -->
+    <aura:attribute name="center" type="Aura.Component[]" access="global"/> <!--               center                                          {!v.center} -->
+    <aura:attribute name="right" type="Aura.Component[]" access="global"/> <!--                right                                           {!v.right} -->
+
+    <div aura:id="container">
+        <lightning:layout>
+        <lightning:layoutItem aura:id="leftColumn" size="2">
+            {!v.left} <!-- Bất cứ gì trong này sẽ nằm trong mảng component left ở trên-->
+        </lightning:layoutItem>
+        <lightning:layoutItem aura:id="centerColumn" size="7" class="center">
+            {!v.center} <!-- Bất cứ gì trong này sẽ nằm trong mảng component center ở trên-->
+        </lightning:layoutItem>
+        <lightning:layoutItem aura:id="rightColumn" size="3">
+            {!v.right} <!-- Bất cứ gì trong này sẽ nằm trong mảng component right ở trên-->
+        </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+</aura:component>

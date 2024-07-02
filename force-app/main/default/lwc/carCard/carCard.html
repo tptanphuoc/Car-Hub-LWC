@@ -1,0 +1,26 @@
+<template>
+    <lightning-card class="uppercase-title" title={carName} icon-name="standard:apex_plugin">
+        <template lwc:if={recordId}> <!--Show navigate button only when a Car is selected-->
+            <lightning-button-icon icon-name="utility:expand_alt" slot="actions"
+                onclick={handleNavigateToRecord}></lightning-button-icon>
+        </template>
+        <template lwc:if={recordId}> <!-- Load the Car details only if recordId is available -->
+            <div class="slds-m-horizontal_medium">
+                <img src={carPictureURL} alt="Car picture" />
+                <lightning-record-view-form record-id={recordId} object-api-name="Car__c" density="compact"
+                    onload={handleCarLoading}>
+                    <lightning-output-field field-name={carCategory}></lightning-output-field>
+                    <lightning-output-field field-name={carMake}></lightning-output-field>
+                    <lightning-output-field field-name={carPrice}></lightning-output-field>
+                    <section>Other Features</section>
+                    <lightning-output-field field-name={carFuel}></lightning-output-field>
+                    <lightning-output-field field-name={carSeat}></lightning-output-field>
+                    <lightning-output-field field-name={carControl}></lightning-output-field>
+                </lightning-record-view-form>
+            </div>
+        </template>
+        <template lwc:else> <!-- If recordId is not available -->
+            <c-placeholder message="Select a Car to see details"></c-placeholder>
+        </template>
+    </lightning-card>
+</template>
